@@ -1245,8 +1245,12 @@ document.addEventListener('click', () => {
 }, { once: false });
 
 // ── INIT ──────────────────────────────────────────────────────────────────────
+function showLandscapePrompt() {
+  transitionScreen('title-screen', 'landscape-prompt', () => {});
+}
+
 function showGameScreen() {
-  transitionScreen('title-screen', 'game-screen', () => {
+  transitionScreen('landscape-prompt', 'game-screen', () => {
     loadScene('room');
   });
 }
@@ -1279,5 +1283,6 @@ function restartGame() {
   transitionScreen('end-screen', 'title-screen', () => {});
 }
 
-document.getElementById('start-btn').addEventListener('click', showGameScreen);
+document.getElementById('start-btn').addEventListener('click', showLandscapePrompt);
+document.getElementById('start-game-btn').addEventListener('click', showGameScreen);
 document.getElementById('restart-btn').addEventListener('click', restartGame);
