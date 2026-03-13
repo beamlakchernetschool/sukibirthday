@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feven's Bloom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="game-wrapper">
+
+    <!-- TITLE SCREEN -->
+    <div id="title-screen" class="screen active">
+      <div id="title-bg"></div>
+      <div id="title-content">
+        <div id="title-petal-1" class="petal-deco"></div>
+        <div id="title-petal-2" class="petal-deco"></div>
+        <div id="title-petal-3" class="petal-deco"></div>
+        <h1 id="game-title">Feven's Bloom</h1>
+        <p id="game-subtitle">A birthday hidden in a garden</p>
+        <button id="start-btn" class="btn-primary">Begin</button>
+      </div>
+    </div>
+
+    <!-- MAIN GAME SCREEN -->
+    <div id="game-screen" class="screen">
+      <div id="scene-bg" aria-hidden="true"></div>
+      <div id="scene-overlay" aria-hidden="true"></div>
+
+      <!-- Inventory panel -->
+      <div id="inventory-panel">
+        <div id="inv-header">
+          <span class="inv-icon">🌸</span>
+          <span>Inventory</span>
+        </div>
+        <ul id="inv-list"></ul>
+      </div>
+
+      <!-- Main stage: portrait + dialogue -->
+      <div id="stage">
+
+        <!-- Portrait placeholder -->
+        <div id="portrait-area">
+          <div id="portrait-frame">
+            <div id="portrait-img">
+              <!-- portrait images go here in the future -->
+              <span id="portrait-initials"></span>
+            </div>
+            <div id="portrait-name-tag"></div>
+          </div>
+        </div>
+
+        <!-- Dialogue and choices -->
+        <div id="dialogue-area">
+          <div id="dialogue-box">
+            <div id="speaker-name"></div>
+            <div id="dialogue-text"></div>
+            <div id="next-hint">▼</div>
+          </div>
+
+          <div id="choices-box">
+            <div id="choices-label">What do you do?</div>
+            <div id="choices-list"></div>
+          </div>
+        </div>
+
+      </div><!-- /stage -->
+    </div><!-- /game-screen -->
+
+    <!-- ENDING SCREEN -->
+    <div id="end-screen" class="screen">
+      <div id="end-bg"></div>
+      <div id="end-content">
+        <div id="petal-shower" aria-hidden="true"></div>
+        <p id="end-subtitle">✦ A gift hidden in every petal ✦</p>
+        <h2 id="end-title">Happy Birthday, Feven.</h2>
+        <p id="end-message"></p>
+        <button id="restart-btn" class="btn-primary">Play Again</button>
+      </div>
+    </div>
+
+  </div><!-- /game-wrapper -->
+
+  <!-- Background Music -->
+  <audio id="bg-music" loop preload="auto"></audio>
+
+  <script src="game.js"></script>
+</body>
+</html>
