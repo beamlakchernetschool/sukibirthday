@@ -531,3 +531,75 @@ html, body {
 .fade-in  { animation: fadeIn  0.7s ease forwards; }
 @keyframes fadeOut { to { opacity: 0; } }
 @keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
+
+/* ===== LANDSCAPE PROMPT SCREEN ===== */
+#landscape-prompt {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--clr-bg);
+}
+#landscape-content {
+  background: var(--clr-panel);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius);
+  padding: 40px;
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 90%;
+}
+#landscape-title {
+  font-family: var(--font-serif);
+  color: var(--clr-gold);
+}
+
+/* ===== LANDSCAPE RESPONSIVENESS ===== */
+@media (max-height: 500px) and (orientation: landscape) {
+  /* Scale down the UI elements so they don't cover the screen */
+  #game-title { font-size: 2.5rem; }
+  .btn-primary { padding: 8px 32px; font-size: 0.9rem; }
+  
+  #inventory-panel {
+    top: 8px; right: 8px;
+    width: 160px;
+    padding: 8px 10px;
+  }
+  #inv-list li {
+    font-size: 0.7rem;
+    padding: 4px 6px;
+  }
+  
+  #stage {
+    padding: 0 8px 8px 8px;
+    gap: 8px;
+  }
+  
+  #portrait-area { width: 90px; margin-right: 8px; }
+  #portrait-img { width: 90px; height: 110px; }
+  
+  #dialogue-box {
+    padding: 8px 12px 12px;
+  }
+  #dialogue-text {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    min-height: 3em;
+  }
+  #speaker-name {
+    margin-bottom: 4px;
+    font-size: 0.8rem;
+  }
+  
+  #choices-box {
+    padding: 8px 12px 10px;
+  }
+  .choice-btn {
+    padding: 6px 12px 6px 26px;
+    font-size: 0.8rem;
+  }
+  #choices-list { gap: 4px; }
+}
