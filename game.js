@@ -74,6 +74,12 @@ const PORTRAIT_MAP = {
     inspired: PRT + 'kellan_inspired.png',
     default:  PRT + 'kellan_neutral.png',
   },
+  feven: {
+    default:  PRT + 'feven_default.png',
+  },
+  beamlak: {
+    default:  PRT + 'beamlak_default.png',
+  },
   tade: {
     apologetic:  PRT + 'tade_apologetic.png',
     default:     PRT + 'tad_mischevious.png', // mischievous is default
